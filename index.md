@@ -1,9 +1,3 @@
-&lt;!--
-  Metodi Tarnev – Single-File Portfolio
-  Save as index.md in your &lt;username&gt;.github.io repo
-  GitHub Pages will auto-render → https://username.github.io
---&gt;
-
 &lt;style&gt;
   :root {
     --bg: #fafafa;
@@ -153,3 +147,4 @@ Feel free to ping me about **backend gigs**, **AI side-projects**, or **Rust mem
 &lt;footer&gt;
   Made with ❤️ and Markdown. Last updated 2025-10-28.
 &lt;/footer&gt;
+
