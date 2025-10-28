@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metodi Tarnev – Full-Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --accent: #0066ff;
+      --card: #f5f5f5;
+      --text-muted: #555;
+      --radius: 12px;
+      --section-padding: 4rem 1.5rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --fg: #f0f6fc;
+        --accent: #58a6ff;
+        --card: #161b22;
+        --text-muted: #8b949e;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(var(--bg), 0.8);
+      border-bottom: 1px solid var(--text-muted);
+      z-index: 10;
+    }
+    nav {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav li a {
+      font-weight: 600;
+      color: var(--fg);
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+      padding: var(--section-padding);
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { max-width: 600px; color: var(--text-muted); }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: var(--section-padding);
+    }
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: transform 0.2s, border 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .chip {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.2em 0.6em;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin: 0.1em;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    @media (max-width: 600px) {
+      nav ul { gap: 1rem; font-size: 0.9rem; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div><strong>Metodi Tarnev</strong></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="about">
+  <h1>Full-Stack Developer & AI Enthusiast</h1>
+  <p>
+    I craft scalable backends, reactive frontends and computer-vision apps.
+    Currently finishing my Software-Engineering degree @ Fontys while shipping
+    production code at Thermo Fisher Scientific.
+  </p>
+  <div>
+    <a class="btn" href="assets/cv.pdf" target="_blank">Download CV</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Featured Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Hand-Writing Recognition AI</h3>
+      <p>React-Native camera app + Flask API. Custom CNN converts handwritten notes → digital text.</p>
+      <div>
+        <span class="chip">Python</span><span class="chip">TensorFlow</span><span class="chip">React-Native</span>
+      </div>
+      <p><a href="https://github.com/metoditarnev/handwriting-ai" target="_blank">GitHub →</a></p>
+    </div>
+    <div class="card">
+      <h3>Scalable Video Platform</h3>
+      <p>Micro-services on GCP. Rust REST API for blazing-fast streams; React dashboard.</p>
+      <div>
+        <span class="chip">Rust</span><span class="chip">React</span><span class="chip">GCP</span><span class="chip">K8s</span>
+      </div>
+      <p><a href="https://video.metoditarnev.dev" target="_blank">Live Demo →</a></p>
+    </div>
+    <div class="card">
+      <h3>Diet Diary</h3>
+      <p>Spring-Boot + React nutrition tracker. Dockerised, CI/CD via GitLab.</p>
+      <div>
+        <span class="chip">Java</span><span class="chip">Spring</span><span class="chip">React</span><span class="chip">MySQL</span>
+      </div>
+      <p><a href="https://github.com/metoditarnev/diet-diary" target="_blank">GitHub →</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Thermo Fisher Scientific – Software Developer (Feb-Jul 2025)</h3>
+    <ul>
+      <li>Built .NET REST API that automates XML version upgrades/downgrades → zero legacy downtime.</li>
+      <li>Shipped TypeScript XML-builder UI → 40 % faster content entry for scientists.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>ASML – Software Developer (part-time)</h3>
+    <ul>
+      <li>Flask + React tool that migrates web pages → Confluence automatically.</li>
+      <li>Kubernetes + GitLab CI saved technical writers ~3 h/week.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    Want to chat about backend gigs, AI side-projects or Rust memes?
+  </p>
+  <ul>
+    <li>Email: <a href="mailto:metoditarnev@gmail.com">metoditarnev@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/metodi-tarnev-735b9b185/" target="_blank">linkedin.com/in/metodi-tarnev</a></li>
+    <li>GitHub: <a href="https://github.com/metoditarnev" target="_blank">github.com/metoditarnev</a></li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Metodi Tarnev. Built with vanilla HTML/CSS/JS and ☕.
+</footer>
+
+<!-- tiny scroll-spy -->
+<script>
+  const links=document.querySelectorAll('nav a');
+  const sections=document.querySelectorAll('section');
+  window.addEventListener('scroll',()=>{
+    let cur='';
+    sections.forEach(sec=>{
+      const off=sec.offsetTop-60;
+      if(scrollY>=off) cur=sec.getAttribute('id');
+    });
+    links.forEach(l=>l.classList.toggle('active',l.getAttribute('href').slice(1)===cur));
+  });
+</script>
+</body>
+</html>
